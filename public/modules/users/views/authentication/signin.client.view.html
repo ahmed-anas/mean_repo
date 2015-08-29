@@ -1,0 +1,36 @@
+<section class="row" data-ng-controller="AuthenticationController">
+
+	<div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4 login-form-bg">
+		<form data-ng-submit="signin()" class="signin form-horizontal" autocomplete="off">
+			<fieldset>
+				<div class="form-group">
+					<h3 class="col-md-12 text-center">Login</h3>
+				</div>
+
+				<div class="form-group">
+					<div data-ng-show="error" class="text-center text-danger">
+						<div data-ng-bind="error" class="alert alert-danger" role="alert">...</div>
+					</div>
+					<div class="input-group">
+					  <span class="input-group-addon glyphicon glyphicon-user"></span>
+					  <input type="text" id="username" data-ng-model="credentials.username" name="username" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+					  <span class="input-group-addon glyphicon glyphicon-asterisk"></span>
+					  <input type="password" id="username" data-ng-model="credentials.username" name="username" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+					</div>
+				</div>
+				<div class="text-center form-group">
+					<button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+				</div>
+				<div class="forgot-password">
+					<a href="/#!/password/forgot">Forgot your password?</a> or
+					<a href="/#!/signup">Sign up</a>
+				</div>
+
+			</fieldset>
+		</form>
+	</div>
+</section>
